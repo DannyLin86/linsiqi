@@ -33,10 +33,15 @@
     </div>
     <div id="wrong-words-section">
       <h3>错题本</h3>
-      <ul id="wrong-words-list"></ul>
-      <button id="start-test" onclick="window.open('test.html', '_blank')">开始测试</button>
-      <button id="view-wrong-words">查看错题本</button>
-      
+      <ul id="wrong-words-list">
+        <li>
+          <span class="word-with-button">
+            <span class="word-text"></span>
+            <button class="pronounce-word-btn">发音</button>
+          </span>
+        </li>
+      </ul>
+      <button id="start-test" onclick="window.open('test.html', '_blank')">开始测试</button>      
     </div>
   </div>
   <script src="words.js"></script>

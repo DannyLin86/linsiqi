@@ -11,7 +11,7 @@ const progressBar = document.getElementById("progress-bar");
 const progressText = document.getElementById("progress-text");
 const wrongWordCheckbox = document.getElementById("wrong-word-checkbox");
 const wrongWordsList = document.getElementById("wrong-words-list");
-const viewWrongWordsButton = document.getElementById("view-wrong-words");
+
 
 let currentIndex = 0;
 let wrongWords = [];
@@ -53,24 +53,48 @@ function pronounceExample() {
   window.speechSynthesis.speak(utterance);
 }
 
-// 监听复选框变化，将单词添加至错题本
+// 监听复选框变化，将单词添加至错题本并即时更新错题本列表
 wrongWordCheckbox.addEventListener("change", function(event) {
   if (event.target.checked) {
     wrongWords.push(words[currentIndex]);
+    showWrongWordsList(); // 添加这一行，使得添加错题后立即刷新错题本列表
   } else {
     const indexToRemove = wrongWords.findIndex(word => word.word === words[currentIndex].word);
     if (indexToRemove !== -1) {
       wrongWords.splice(indexToRemove, 1);
+      showWrongWordsList(); // 同样在此处也可以考虑调用，但通常在查看错题本时整体刷新即可
     }
   }
 });
 
-// 显示错题本的单词列表
+// 在showWrongWordsList函数内部遍历每个单词添加发音按钮事件
 function showWrongWordsList() {
+  const wrongWordsList = document.getElementById("wrong-words-list");
   wrongWordsList.innerHTML = "";
+  
   wrongWords.forEach((word, index) => {
     const li = document.createElement("li");
-    li.textContent = `${index + 1}. ${word.word} - ${word.definition}`;
+    const wordWithButton = document.createElement("span");
+    wordWithButton.classList.add("word-with-button");
+
+    const wordText = document.createElement("span");
+    wordText.classList.add("word-text");
+    wordText.textContent = `${word.word} - ${word.definition}`;
+
+    const pronounceBtn = document.createElement("button");
+    pronounceBtn.classList.add("pronounce-word-btn");
+    pronounceBtn.textContent = "发音";
+
+    pronounceBtn.addEventListener("click", () => {
+      const utterance = new SpeechSynthesisUtterance(word.word);
+      utterance.lang = 'en-GB';
+      window.speechSynthesis.speak(utterance);
+    });
+
+    wordWithButton.appendChild(wordText);
+    wordWithButton.appendChild(pronounceBtn);
+    li.appendChild(wordWithButton);
+
     wrongWordsList.appendChild(li);
   });
 }
@@ -88,7 +112,7 @@ nextButton.addEventListener("click", () => {
 
 pronounceWordButton.addEventListener("click", pronounceWord);
 pronounceExampleButton.addEventListener("click", pronounceExample);
-viewWrongWordsButton.addEventListener("click", showWrongWordsList);
+
 
 // 初始化显示第一个单词
 displayWord(currentIndex);
