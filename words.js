@@ -1,174 +1,127 @@
-// words.js
 const words = [
   {
     word: "geese",
     phonetic: "/giːz/",
-    definition: "鹅（复数形式）"
-  },
-  {
-    word: "jeep",
-    phonetic: "/dʒiːp/",
-    definition: "吉普车"
-  },
-  {
-    word: "tree",
-    phonetic: "/triː/",
-    definition: "树"
-  },
-  {
-    word: "three",
-    phonetic: "/θriː/",
-    definition: "三"
-  },
-  {
-    word: "sheep",
-    phonetic: "/ʃiːp/",
-    definition: "绵羊（单复数同形）"
+    definition: "鹅（复数形式）",
+    example: "This is a flock of geese."
   },
   {
     word: "tiger",
     phonetic: "/ˈtaɪɡə(r)/",
-    definition: "老虎"
-  },
-  {
-    word: "dancer",
-    phonetic: "/ˈdaːnsə(r)/",
-    definition: "舞蹈家"
-  },
-  {
-    word: "flower",
-    phonetic: "/ˈflaʊə(r)/",
-    definition: "花"
-  },
-  {
-    word: "farmer",
-    phonetic: "/ˈfaːmə(r)/",
-    definition: "农民"
+    definition: "老虎",
+    example: "A tiger wants to eat a rooster."
   },
   {
     word: "rooster",
     phonetic: "/ˈruːstə(r)/",
-    definition: "公鸡"
+    definition: "公鸡",
+    example: "The tiger dresses up as a rooster dancer."
+  },
+  {
+    word: "dancer",
+    phonetic: "/ˈdaːnsə(r)/",
+    definition: "舞蹈家",
+    example: "But the rooster knows it is the tiger dressed up as a dancer."
   },
   {
     word: "singer",
     phonetic: "/ˈsɪŋə(r)/",
-    definition: "歌唱家"
+    definition: "歌唱家",
+    example: "The tiger dresses up as a rooster singer.",
+  },
+  {
+    word: "flower",
+    phonetic: "/ˈflaʊə(r)/",
+    definition: "花",
+    example: "The tiger holds a beautiful flower and waits at a corner."
   },
   {
     word: "corner",
     phonetic: "/ˈkɔːnə(r)/",
-    definition: "角落"
+    definition: "角落",
+    example: "The tiger holds a beautiful flower and waits at a corner."
+  },
+  {
+    word: "danger",
+    phonetic: "/ˈdeɪndʒə(r)/",
+    definition: "危险",
+    example: "So he runs to the tiger. The rooster is in danger!"
+  },
+  {
+    word: "farmer",
+    phonetic: "/ˈfaːmə(r)/",
+    definition: "农民",
+    example: "Oh! Here comes the farmer with a hammer!"
   },
   {
     word: "hammer",
     phonetic: "/ˈhæmə(r)/",
-    definition: "锤子"
-  },
-  {
-    word: "thirteen",
-    phonetic: "/ˌθɜːˈtiːn/",
-    definition: "十三"
-  },
-  {
-    word: "thirty",
-    phonetic: "/ˈθɜːti/",
-    definition: "三十"
-  },
-  {
-    word: "shirt",
-    phonetic: "/ʃɜːt/",
-    definition: "衬衫"
-  },
-  {
-    word: "thirsty",
-    phonetic: "/ˈθɜːsti/",
-    definition: "口渴的"
-  },
-  {
-    word: "bird",
-    phonetic: "/bɜːd/",
-    definition: "鸟"
-  },
-  {
-    word: "hills",
-    phonetic: "/hɪlz/",
-    definition: "小山（复数形式）"
-  },
-  {
-    word: "river",
-    phonetic: "/ˈrɪvə(r)/",
-    definition: "河流"
-  },
-  {
-    word: "umbrellas",
-    phonetic: "/ʌmˈbreləz/",
-    definition: "雨伞（复数形式）"
+    definition: "锤子",
+    example: "Oh! Here comes the farmer with a hammer!"
   },
   {
     word: "dirty",
     phonetic: "/ˈdɜːti/",
-    definition: "脏的"
-  },
-  // 下面是一些短语
-  {
-    word: "run through",
-    phonetic: "/rʌn θruː/",
-    definition: "穿过；贯穿"
+    definition: "脏的",
+    example: "And here he is,dirty and thirsty."
   },
   {
-    word: "go out",
-    phonetic: "/ɡəʊ aʊt/",
-    definition: "出去；熄灭"
+    word: "thirteen",
+    phonetic: "/ˌθɜːˈtiːn/",
+    definition: "十三",
+    example: "He runs across thirteen hills."
   },
   {
-    word: "run across",
-    phonetic: "/rʌn əˈkrɒs/",
-    definition: "偶然遇见；跑过"
+    word: "thirty",
+    phonetic: "/ˈθɜːti/",
+    definition: "三十",
+    example: "He runs over thirty rivers."
   },
   {
-    word: "run over",
-    phonetic: "/rʌn ˈəʊvə(r)/",
-    definition: "碾过；超过预定时间"
+    word: "trees",
+    phonetic: "/triːz/",
+    definition: "树木（复数形式）",
+    example: "He runs through thirty trees."
   },
   {
-    word: "ring",
-    phonetic: "/rɪŋ/",
-    definition: "(使)发出铃声；环绕"
+    word: "umbrellas",
+    phonetic: "/ʌmˈbreləz/",
+    definition: "雨伞（复数形式）",
+    example: "He runs over thirteen umbrellas."
+  },
+  {
+    word: "shirts",
+    phonetic: "/ʃɜːts/",
+    definition: "衬衫（复数形式）",
+    example: "He runs under thirteen shirts."
   },
   {
     word: "bell",
     phonetic: "/bel/",
-    definition: "铃；钟声"
-  },
-  {
-    word: "sing",
-    phonetic: "/sɪŋ/",
-    definition: "唱；唱歌"
-  },
-  {
-    word: "sing a song",
-    phonetic: "/sɪŋ ə sɔːŋ/",
-    definition: "唱歌"
-  },
-  {
-    word: "all day long",
-    phonetic: "/ɔːl deɪ lɒŋ/",
-    definition: "一整天"
-  },
-  {
-    word: "long",
-    phonetic: "/lɒŋ/",
-    definition: "长的"
+    definition: "铃；钟声",
+    example: "Ring, ring, ring a bell."
   },
   {
     word: "king",
     phonetic: "/kɪŋ/",
-    definition: "国王"
+    definition: "国王",
+    example: "The king is going to sing a song."
   },
   {
     word: "song",
     phonetic: "/sɒŋ/",
-    definition: "歌曲；歌谣"
+    definition: "歌曲；歌谣",
+    example: "It's a long, long song.",
+    second_example: "\"Dear King, the song is too long.\"",
+    third_example: "\"Maybe the song is a little long.\"",
+    fourth_example: "But the king really likes the long, long song.",
+    fifth_example: "The king sings the song all day long.",
+    sixth_example: "\"Maybe the song is too long.\""
+  },
+  {
+    word: "all day long",
+    phonetic: "/ɔːl deɪ lɒŋ/",
+    definition: "一整天",
+    example: "The king sings the song all day long."
   }
 ];
